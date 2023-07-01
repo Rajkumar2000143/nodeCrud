@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejs</title>
+    <style>
+        table,th{
+            border: 2px solid red;
+            border-collapse: collapse;
+        }
+        li{
+            list-style-type: none;
+            border: 1px solid rgb(219, 18, 18);
+        }
+    </style>
+</head>
+<body>
+    <h1>EJS</h1>
+    <form action="/" method="post">
+        <input type="text" name="uname" placeholder="enter ur name" required>
+        <input type="text" name="udt" placeholder="enter ur dt" required>
+        <input type="text" name="uage" placeholder="enter ur age" required>
+        <input type="text" name="usex" placeholder="enter ur sex" required>
+
+
+        <input type="submit">
+    </form>
+   
+        <h1>datas</h1>
+        <table>
+        <tr>
+            <th>Name</th>
+            <th>District</th>
+            <th>Age</th>
+            <th>sex</th>
+
+        </tr>
+
+            <tr><td>
+            <%if(a.length<=0){%>
+                
+                 
+    <%}else{%>
+        <%for(i=0;i<=a.length;i++){%>
+            <li> <%=a[i]%> </li>
+        <%}%>
+    <%}%></td> 
+
+    <td>
+    <%if(b.length<=0){%>
+    
+       
+        <%}else{%>
+            <%for(i=0;i<=b.length;i++){%>
+                <li> <%=b[i]%></li>
+            <%}%>
+        <%}%></td>
+
+        <td>
+            <%if(c.length<=0){%>
+            <%}else{%>
+            <%for(i=0;i<=c.length;i++){%>
+            <li><%=c[i]%></li>
+            <%}%>
+            <%}%>
+        </td>
+        <td>
+            <%if(d.length<=0){%>
+            <%}else{%>
+            <%for(i=0;i<=d.length;i++){%>
+            <li><%=d[i]%></li>
+            <%}%>
+            <%}%>
+        </td>
+    
+    </tr>
+      </table> 
+</body>
+</html>
